@@ -19,11 +19,15 @@ import { ChallengeOptionList } from "./challengeOption/list";
 import { ChallengeOptionCreate } from "./challengeOption/create";
 import { ChallengeOptionEdit } from "./challengeOption/edit";
 
+import MyLayout from "./MyLayout"; // Import custom layout
+
 const dataProvider = simpleRestProvider("/api");
+
+
 
 const App = () => {
     return (
-        <Admin dataProvider={dataProvider}>
+        <Admin dataProvider={dataProvider} layout={MyLayout}>
             <Resource
                 name="courses"
                 list={CourseList}
